@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aprumese.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d17a99b062c4858e79211a022767aa292483c5b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e066107508bb30816180d8520033490c95f85d54")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aprumese.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aprumese.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
