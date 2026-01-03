@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <!-- Sets the target framework for all projects in this directory and below -->
+    <TargetFramework>net10.0</TargetFramework>
+
+    <!-- Optional: set the C# language version -->
+    <LangVersion>12</LangVersion>
+  </PropertyGroup>
+</Project>
