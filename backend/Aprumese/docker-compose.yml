@@ -1,0 +1,14 @@
+services:
+  aprumese.api:
+    image: ${DOCKER_REGISTRY-}aprumeseapi
+    build:
+      context: .
+      dockerfile: Aprumese.Api/Dockerfile
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: aprumese
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432

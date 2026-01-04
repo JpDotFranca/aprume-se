@@ -8,4 +8,7 @@
   </Folder>
   <Project Path="Aprumese.Api/Aprumese.Api.csproj" />
   <Project Path="Aprumese.Tests/Aprumese.Tests.csproj" Id="9ce2ffe2-ea02-4f19-b0cd-232a2d672c5a" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
 </Solution>
