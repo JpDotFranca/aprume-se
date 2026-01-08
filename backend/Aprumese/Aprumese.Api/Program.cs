@@ -4,8 +4,16 @@ using Asp.Versioning;
 using Asp.Versioning.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.AspNetCore.Http;
+using System.Text.Json;
+using Microsoft.AspNetCore.Http.Json;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<JsonOptions>(options =>
+{
+    options.SerializerOptions.PropertyNamingPolicy = null;
+});
 
 builder.Services.AddApiVersioning(options =>
 {
@@ -26,10 +34,12 @@ builder.Services.AddDbContext<DatabaseContext>(options =>
 builder.Services.AddTransient<IncomeRepository>();
 builder.Services.AddTransient<IncomeService>();
 
+// ---------------------------------------------------------------------------- //
+
 WebApplication app = builder.Build();
 
 ApiVersionSet apiVersionSet = app.NewApiVersionSet()
-                                 .HasApiVersion(new ApiVersion(1)) 
+                                 .HasApiVersion(new ApiVersion(1))
                                  .ReportApiVersions()
                                  .Build();
 
