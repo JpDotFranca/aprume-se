@@ -1,4 +1,6 @@
-﻿namespace Aprumese.Api.src.Cashflow.Incomes;
+﻿using Aprumese.Api.src.Cashflow.Incomes.Models;
+
+namespace Aprumese.Api.src.Cashflow.Incomes;
 
 class IncomeService(IncomeRepository IncomeRepository)
 {

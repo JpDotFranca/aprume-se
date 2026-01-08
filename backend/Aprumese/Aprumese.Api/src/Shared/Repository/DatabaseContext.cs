@@ -1,4 +1,4 @@
-﻿using Aprumese.Api.src.Cashflow.Incomes;
+﻿using Aprumese.Api.src.Cashflow.Incomes.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aprumese.Api.src.Shared.Repository;

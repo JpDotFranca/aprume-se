@@ -1,4 +1,5 @@
-﻿using Aprumese.Api.src.Shared.Repository;
+﻿using Aprumese.Api.src.Cashflow.Incomes.Models;
+using Aprumese.Api.src.Shared.Repository;
 
 namespace Aprumese.Api.src.Cashflow.Incomes;
 

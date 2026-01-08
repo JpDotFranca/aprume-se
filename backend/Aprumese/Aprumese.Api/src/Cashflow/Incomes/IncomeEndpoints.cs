@@ -1,4 +1,6 @@
-﻿namespace Aprumese.Api.src.Cashflow.Incomes;
+﻿using Aprumese.Api.src.Cashflow.Incomes.Models;
+
+namespace Aprumese.Api.src.Cashflow.Incomes;
 
 static class IncomeEndpoints
 {
@@ -6,11 +8,15 @@ static class IncomeEndpoints
 
     internal static void MapIncomeEndpoints(this IEndpointRouteBuilder endpointBuilder)
     {
-        endpointBuilder.MapPost($"/{RESOURCE_ROUTER}", async (IncomeService incomeService) =>
+        endpointBuilder.MapPost($"/{RESOURCE_ROUTER}", async (IncomeRequest incomeRequest, IncomeService incomeService) =>
         {
             Income newIncome = new Income("First one", 13.33m);
 
-            return await incomeService.Add(newIncome);
+            await incomeService.Add(newIncome);
+
+            IncomeResponse incomeResponse = newIncome.MapToIncomeResponse();
+
+            return incomeResponse;
         });
     }
 }

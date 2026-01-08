@@ -1,6 +1,6 @@
 ﻿using Aprumese.Api.src.Shared.Domain;
 
-namespace Aprumese.Api.src.Cashflow.Incomes;
+namespace Aprumese.Api.src.Cashflow.Incomes.Models;
 
 public class IncomeCategory : Entity
 {
