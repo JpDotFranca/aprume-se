@@ -2,9 +2,9 @@
 
 namespace Aprumese.Api.src.Cashflow.Incomes;
 
-public class IncomeRepository(DatabaseContext DatabaseContext)
+class IncomeRepository(DatabaseContext DatabaseContext)
 {
-    public async Task<Income> Add(Income newIncome)
+    internal async Task<Income> Add(Income newIncome)
     {
         DatabaseContext.Add(newIncome);
 
