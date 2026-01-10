@@ -1,0 +1,23 @@
+ini .editorconfig
+
+root = true
+
+[*.cs]
+charset = utf-8
+indent_size = 2
+end_of_line = lf
+indent_style = space
+max_line_length = 120
+trim_trailing_whitespace = true
+insert_final_newline = true
+spelling_language = en-US
+
+# var usage preferences:
+# - Allow 'var' only when the type is apparent (e.g., `new Type(...)`).
+# - Do not use 'var' for built-in types or in other cases.
+csharp_style_var_for_built_in_types = false:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_elsewhere = false:warning
+
+# IDE0008: Use explicit type
+dotnet_diagnostic.IDE0008.severity = error
