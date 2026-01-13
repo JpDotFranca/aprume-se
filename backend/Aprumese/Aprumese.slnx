@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/.github/" />
+  <Folder Name="/.github/workflows/">
+    <File Path="../../.github/workflows/aprume-se-api-ci.yml" />
+  </Folder>
   <Folder Name="/Docs/">
     <File Path="README.md" />
   </Folder>

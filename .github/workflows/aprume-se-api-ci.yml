@@ -1,0 +1,14 @@
+name: Docker Image CI
+
+on:
+  [pull_request, workflow_dispatch]
+
+jobs:
+  Checkout-code-and-build-image:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Starting the Checkout"
+    - name: Check out repository code
+      uses: actions/checkout@v5
+    - run: docker build -t aprumese-api:v-$(date +%Y%m%d) -f ./backend/Aprumese/Aprumese.Api.Dockerfile ./backend/Aprumese/
+    - run: docker images
