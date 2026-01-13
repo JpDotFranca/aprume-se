@@ -18,5 +18,7 @@ static class IncomeEndpoints
 
             return incomeResponse;
         });
+
+        endpointBuilder.MapGet("/test", () => "Hello, Moto!");
     }
 }
