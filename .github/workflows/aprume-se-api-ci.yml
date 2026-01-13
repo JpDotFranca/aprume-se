@@ -11,6 +11,7 @@ on:
 
 jobs:
   Checkout-code-and-build-image:
+    environment: Production
     runs-on: ubuntu-latest
     steps:
     - run: echo "Starting the Checkout"
@@ -18,3 +19,10 @@ jobs:
       uses: actions/checkout@v5
     - run: docker build -t aprumese-api:v-$(date +%Y%m%d) -f ./backend/Aprumese/Aprumese.Api.Dockerfile ./backend/Aprumese/
     - run: docker images
+  
+    - run: echo "Publishing the Docker image to registry"
+    - name: Publish to Docker Registry
+      run: |
+        echo ${{secrets.DOCKER_PASSWORD}} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin 
+        docker tag aprumese-api:v-$(date +%Y%m%d) myregistry/aprumese-api:latest
+        docker push myregistry/aprumese-api:latest
